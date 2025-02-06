@@ -64,7 +64,10 @@ export class FakeJsonClient extends BaseJsonClient {
 
   public execute (query: TdObject): NativeTdObject {
     return this.parseResponse(
-      JSON.stringify({ _: 'ok', query })
+      JSON.stringify({
+        _: 'ok',
+        query
+      })
     )
   }
 
@@ -144,9 +147,10 @@ export class FakeJsonClient extends BaseJsonClient {
     }
 
     const requestId = response['@extra']
-
-    delete response['@client_id']
-    delete response['@extra']
+    // eslint-disable-next-line
+    delete (response as any)['@client_id']
+    // eslint-disable-next-line
+    delete (response as any)['@extra']
 
     if (requestId) {
       const clientHandlers = this.getClientHandlers(clientId)

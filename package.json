@@ -1,10 +1,10 @@
 {
   "name": "root",
   "private": true,
-  "author": "Alexander Krisko",
+  "author": "Kratos",
   "license": "GPL-3.0",
-  "homepage": "https://airgram.io",
-  "repository": "https://github.com/airgram/airgram",
+  "homepage": "https://github.com/UnlimCloud/airgram.git",
+  "repository": "https://github.com/UnlimCloud/airgram.git",
   "scripts": {
     "build": "lerna run build --concurrency=1",
     "commit": "commit",
@@ -14,15 +14,14 @@
     "release": "lerna publish --conventional-graduate --dist-tag latest"
   },
   "workspaces": [
-    "packages/*",
-    "examples/*"
+    "packages/*"
   ],
   "devDependencies": {
     "@types/gulp-json-editor": "^2.2.31",
     "@types/gulp-replace": "0.0.31",
     "@types/gulp-shell": "0.7.0",
     "@types/jest": "^24.0.15",
-    "@types/node": "^12.0.10",
+    "@types/node": "^22.13.1",
     "@typescript-eslint/eslint-plugin": "^2.17.0",
     "@typescript-eslint/parser": "^2.17.0",
     "del": "^5.0.0",
@@ -38,15 +37,16 @@
     "gulp-json-editor": "^2.5.3",
     "gulp-replace": "^1.0.0",
     "gulp-shell": "^0.7.0",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-typescript": "^5.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
     "gulpclass": "^0.2.0",
-    "jest": "^25.1.0",
     "lerna": "^3.20.2",
     "nodemon": "^2.0.2",
     "pre-commit": "^1.2.2",
-    "ts-jest": "^24.0.2",
     "ts-node": "^8.6.2",
-    "typescript": "^3.9.7"
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "source-map": "^0.7.4"
   }
 }

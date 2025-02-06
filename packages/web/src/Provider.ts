@@ -41,10 +41,10 @@ export class Provider extends BaseTdProvider {
       throw new Error('[Airgram] tdweb instance has not initialized yet.')
     }
     return this.client.send(this.serialize({ _: method, ...params }))
-      .then((data) => this.deserialize(data as NativeTdObject & null))
+      .then((data) => this.deserialize(data as NativeTdObject))
       .catch((error: any) => {
         if ('@type' in error && error['@type']) {
-          const data = this.deserialize(error)
+          const data = this.deserialize(error) as any
           // Ensures that the message property is a string
           // See: https://github.com/tdlib/td/blob/master/example/web/tdweb/src/index.js#L648
           data.message = String(data.message)

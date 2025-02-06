@@ -10,7 +10,7 @@ export interface PromisifyWorkerMessage<PayloadT> {
 
 export type PromisifyWorker = Omit<Worker, 'postMessage'> & {
   postMessage (message: any, transfer: Transferable[]): Promise<any>
-  postMessage (message: any, options?: PostMessageOptions): Promise<any>
+  postMessage (message: any, options?: any): Promise<any>
   rejectAll (): void
 }
 

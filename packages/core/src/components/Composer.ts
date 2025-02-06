@@ -86,12 +86,12 @@ function mount<ContextT extends { _: string }> (
   return optional(predicate, ...fns)
 }
 
-function fork<ContextT> (middleware: Middleware<ContextT>): Middleware<ContextT> {
-  return (_ctx: unknown, next: NextFn): Middleware<ContextT> => {
-    setTimeout(unwrap(middleware), 0)
-    return next()
-  }
-}
+// function fork<ContextT> (middleware: Middleware<ContextT>): Middleware<ContextT> {
+//   return (_ctx: unknown, next: NextFn): Middleware<ContextT> => {
+//     setTimeout(unwrap(middleware), 0)
+//     return next()
+//   }
+// }
 
 // function tap (handler) {
 //   return (ctx, next) => Promise.resolve(handler(ctx))
@@ -110,7 +110,7 @@ function filter<ContextT> (predicate: unknown): Middleware<ContextT> {
 class Composer<ContextT extends BaseTdObject> implements BaseComposer<ContextT> {
   public static compose = compose
 
-  public static fork = fork
+  // public static fork = fork
 
   public static filter = filter
 

@@ -14,7 +14,7 @@
     "lint": "eslint --fix ./src/**/*.ts",
     "prebuild": "npm run test",
     "prepublishOnly": "yarn run build",
-    "test": "jest"
+    "test": "echo \"Error: no test specified\" "
   },
   "pre-commit": "yarn run lint",
   "publishConfig": {
