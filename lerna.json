@@ -8,10 +8,10 @@
   "command": {
     "version": {
       "changelog": true,
-      "conventionalCommits": true,
+      "conventionalCommits": false,
       "conventionalPrerelease": false,
       "preid": "next",
-      "message": "chore(release): publish 🚀"
+      "message": "pre release"
     },
     "publish": {
       "contents": "dist/package"
@@ -23,7 +23,7 @@
     }
   },
   "packages": [
-    "packages/*"
+    "packages/web"
   ],
   "version": "independent"
 }
