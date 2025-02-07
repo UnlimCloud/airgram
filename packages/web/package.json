@@ -1,5 +1,5 @@
 {
-  "name": "@mygram/web",
+  "name": "@airgram/web",
   "version": "0.0.7",
   "private": false,
   "main": "src/index.ts",
@@ -22,10 +22,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@airgram/core": "^5.1.1",
-    "@mygram/tdweb": "^1.8.44"
+    "@airgram/core": "file:../core/",
+    "tdweb": "file:/Users/kratos/projects/unlim/tdlib/builder/example/web/tdweb/dist"
   },
   "devDependencies": {
-    "@types/tdweb": "1.4.0"
+    "@types/tdweb": "^1.4.5"
   }
 }
